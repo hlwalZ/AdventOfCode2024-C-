@@ -8,11 +8,16 @@
       int totalDifference = 0;
       IEnumerable<string> lines = File.ReadLines("input.txt");
 
+      int totalTimes = 0;
+
       foreach (string line in lines)
       {
         string[] map = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
         totalDifference += Difference(map);
+        Console.WriteLine(totalDifference);
+        totalTimes++;
       }
+      Console.WriteLine(totalTimes);
       Console.WriteLine(totalDifference);
     }
 
@@ -38,19 +43,37 @@
           }
         }
       } // Vieze logica
+      foreach (int ints in intListA)
+      {
+        Console.Write(ints);
+      }
+      Console.Write(" ");
+      foreach (int ints in intListB)
+      {
+        Console.Write(ints);
+      }
+      Console.Write(" ");
       intListA = BubbleSort(intListA);
       intListB = BubbleSort(intListB);
 
       int difference = 0;
       for (int counter = 0; counter < intListA.Count; counter++)
       {
-        difference += intListA[counter] - intListB[counter];
-        if (difference < 0)
+
+        if (intListA[counter] >= intListB[counter])
         {
-          difference = -difference;
-        } // Jammer dat uint hier niet werkt, veroorzaakt een underflow :(
+          difference += intListA[counter] - intListB[counter];
+        }
+        else
+        {
+          difference += intListB[counter] - intListA[counter];
+        }
+        // if (difference < 0)
+        // {
+        //   difference = -difference;
+        // } // Jammer dat uint hier niet werkt, veroorzaakt een underflow :(
       }
-      // Console.WriteLine(difference); // Difference tussen elke lijn
+      Console.Write(difference + ": "); // Difference tussen elke lijn
       return difference;
     }
 
@@ -71,6 +94,11 @@
           }
         }
       }
+      foreach (int ints in unsortedInts)
+      {
+        Console.Write(ints);
+      }
+      Console.Write(" ");
       return unsortedInts;
     }
   }
