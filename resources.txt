@@ -1,0 +1,3 @@
+day1:
+StringSplitOptions.RemoveEmptyEntries: https://www.bytehide.com/blog/split-string-csharp#C_Line_Split_Handling_Newlines_and_Whitespace
+Tuple ("Geen temp waarde" tijdens switchen, technisch gezien natuurlijk niet mogelijk dus het is syntax sugar maar toch): https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples
