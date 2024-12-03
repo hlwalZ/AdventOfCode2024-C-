@@ -10,6 +10,8 @@ Functional programming: https://blog.submain.com/csharp-functional-programming/
 
 day3:
 Regex C#: https://www.c-sharpcorner.com/article/c-sharp-regex-examples/
+Regex .Count .Index: https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex.count?view=net-9.0
 Regex debugger: https://regex101.com/
 Copy to bekeken: https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.matchcollection.copyto?view=net-8.0
 LINQ Cast: https://www.tutlane.com/tutorial/linq/linq-cast-method
+
