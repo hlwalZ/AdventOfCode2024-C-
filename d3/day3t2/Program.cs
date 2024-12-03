@@ -24,12 +24,6 @@ namespace day3t2
 
       bool state = true;
       bool lastDo = false;
-      // For each, check of het > do is en < don't.
-
-      // for (int i = 0; i < dos.Count; i++)
-      // {
-      //   Console.WriteLine(dos[i].Value + " " + dos[i].Index);
-      // }
 
       Console.WriteLine(dos.Count);
       Console.WriteLine(dont.Count);
@@ -64,7 +58,7 @@ namespace day3t2
         }
 
         if (doIndex == dos.Count - 1) { lastDo = true; } // Eerlijk deze extra logica checks zijn echt zo vies, we hadden het kunnen hardcoden.
-        if (lastDo == true && amount[i].Index > dontIndexes[dontIndex]) break;   // if (amount[i].Index > 16187) break; hardcoden was 
+        if (lastDo == true && amount[i].Index > dontIndexes[dontIndex]) break;   // if (amount[i].Index > 16187) break; hardcoden zou nog viezer zijn maar ok.
         // Volgende keer wat minder simpele logica toepassen, dit is echt insane.
         // Dit is alleen ontstaan doordat de logica alleen maar een state is en er eigenlijk iets meer gevallen blijken te zijn...
 
