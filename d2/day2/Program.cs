@@ -8,13 +8,11 @@ namespace day2
 
     static void Main()
     {
-      IEnumerable<string> input = File.ReadLines("input2.txt");
+      IEnumerable<string> input = File.ReadLines("input.txt");
       List<List<int>> result = new List<List<int>>();
       bool? listUP;
-      bool flagSafe = true;
       int totalSafe = 0;
-      int amountNull = 0;
-      int amountFalse = 0;
+
 
 
       foreach (string line in input)
@@ -23,23 +21,13 @@ namespace day2
 
         result.Add(intsList);
       }
-      int listIndex = 0;
+
       foreach (List<int> list in result) // Voor elke rij in results
       {
-        foreach (int a in list)
-        {
-          Console.Write(a + " ");
-        }
 
         listUP = GoesUp(list[0], list[1]); // Check of de rij omhoog of omlaagmoet.
+        if (listUP == null) continue;
 
-        if (listUP == null)
-        {
-          amountNull++;
-          flagSafe = false;
-          Console.Write(" Dit is null \n");
-          continue;
-        }
 
 
 
@@ -47,7 +35,6 @@ namespace day2
         {
           if (GoesUp(list[i], list[i + 1]) != listUP)
           {
-            flagSafe = false;
             break; // Als de waardes niet gelijk zijn aan elkaar gaat deze combinatie niet altijd naar boven of beneden.
           }
 
@@ -55,32 +42,20 @@ namespace day2
 
           if (diff > 0 && diff < 4)
           {
-            Console.Write("Dk");
-            flagSafe = true;
+            totalSafe++;
           }
           else
           {
-            Console.Write("Dg");
-            flagSafe = false;
             break; // Te groot verschil, niet veilig.
           }
-        }
-        if (flagSafe == true)
-        {
-          totalSafe++;
-          Console.Write(" Dit is positief \n");
-        }
-        else
-        {
-          amountFalse++;
-          Console.Write(" Dit is false \n");
-        }
 
+
+
+        }
+        Console.WriteLine(totalSafe);
       }
-      Console.WriteLine(totalSafe);
 
-      Console.WriteLine(amountNull);
-      Console.WriteLine(amountFalse);
+
 
     }
 
