@@ -1,3 +1,15 @@
 day1:
 StringSplitOptions.RemoveEmptyEntries: https://www.bytehide.com/blog/split-string-csharp#C_Line_Split_Handling_Newlines_and_Whitespace
 Tuple ("Geen temp waarde" tijdens switchen, technisch gezien natuurlijk niet mogelijk dus het is syntax sugar maar toch): https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples
+
+
+day2:
+Functional programming: https://blog.submain.com/csharp-functional-programming/
+[Maak een cheat-sheet en probeer dit toe te passen gedurende de opdrachten]
+
+
+day3:
+Regex C#: https://www.c-sharpcorner.com/article/c-sharp-regex-examples/
+Regex debugger: https://regex101.com/
+Copy to bekeken: https://learn.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.matchcollection.copyto?view=net-8.0
+LINQ Cast: https://www.tutlane.com/tutorial/linq/linq-cast-method
